@@ -1,3 +1,9 @@
 def my_select(collection)
- # your code here!
+ result = []
+ for item in collection
+    if yield(item)
+      result << item
+    end
+  end
+  result
 end
